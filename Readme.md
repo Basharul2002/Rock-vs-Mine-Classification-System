@@ -1,119 +1,100 @@
-# 🪨✨ **Rock vs Mine Classification System**  
-A Machine Learning Project to Classify Sonar Signals
+<h1 align="center">🪨 Rock vs Mine Classification System ⛏️</h1>
+
+<p align="center">
+  A machine learning-based system to classify sonar signals between rocks and mines! 🔍🚢
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue" />
+  <img src="https://img.shields.io/badge/Scikit--learn-0.24-orange" />
+  <img src="https://img.shields.io/badge/Pandas-1.3.3-yellowgreen" />
+  <img src="https://img.shields.io/badge/NumPy-1.21-lightblue" />
+  <!-- <img src="https://img.shields.io/github/license/basharul2002/Rock-vs-Mine-Classification" /> -->
+</p>
 
 ---
 
-## 🌟 **Project Highlights**
+## 📖 Overview
 
-This machine learning project is designed to classify sonar signals and differentiate between **Rocks** and **Mines** using a **Logistic Regression** model. The sonar dataset is utilized to train the model, which can predict whether an object is a mine or a rock based on sonar features.
+The **Rock vs Mine Classification System** is designed to classify sonar signals into **Rocks** or **Mines**. This project uses **Logistic Regression** to analyze and predict based on sonar frequencies reflected off objects.
 
-### 🔑 Key Features:
+## 💡 Features
+- **Data Preprocessing**: Clean and prepare sonar data for analysis.
+- **Model Training**: Train a machine learning model using **Logistic Regression**.
+- **Object Classification**: Classify whether an object is a **Rock** or a **Mine** based on sonar readings.
+- **Accurate Predictions**: Achieve reliable performance through testing and evaluation.
 
-- 📊 **Data Collection & Preprocessing** from sonar readings.
-- 🧠 **Model Training** using Logistic Regression.
-- 📈 **Evaluation** of model performance on training and test data.
-- 🔍 **Prediction System** that identifies if the object is a rock or a mine based on input data.
+## 🛠️ Technologies Used
 
----
-
-## 📋 **Table of Contents**
-
-- [🪨✨ **Rock vs Mine Classification System**](#-rock-vs-mine-classification-system)
-  - [🌟 **Project Highlights**](#-project-highlights)
-    - [🔑 Key Features:](#-key-features)
-  - [📋 **Table of Contents**](#-table-of-contents)
-  - [📦 **Dependencies**](#-dependencies)
-  - [📊 **Data Overview**](#-data-overview)
-    - [✨ Key Steps in Data Processing:](#-key-steps-in-data-processing)
-  - [🧠 **Model Training**](#-model-training)
-    - [🛠️ **Training Process**:](#️-training-process)
-  - [📈 **Evaluation \& Performance**](#-evaluation--performance)
-  - [🔍 **Prediction System**](#-prediction-system)
-  - [🏆 **Conclusion**](#-conclusion)
-  - [📫 **Contact Information**](#-contact-information)
-    - [🎯 **Let's build a better future with Machine Learning!**](#-lets-build-a-better-future-with-machine-learning)
+- **Python**: Main programming language for model development.
+- **NumPy**: Used for numerical operations and matrix manipulations.
+- **Pandas**: For handling and preprocessing sonar data.
+- **Scikit-learn**: To implement Logistic Regression and model evaluation.
 
 ---
 
-## 📦 **Dependencies**
+## 🚀 How It Works
 
-To get started, make sure you have the following Python libraries installed:
+1. **Data Preprocessing**: The dataset is loaded, and features (sonar signal readings) are extracted. Missing values are checked, and the data is split into training and test sets.
 
-- **NumPy**: For numerical operations.
-- **Pandas**: For data handling and manipulation.
-- **Scikit-learn**: For model training, testing, and evaluation.
+2. **Model Training**: A **Logistic Regression** model is trained using 90% of the dataset, while the remaining 10% is used to evaluate model performance.
 
-Install all dependencies using:
+3. **Prediction System**: Users can input new sonar data to classify whether the object is a **Rock** or a **Mine**.
 
+---
+
+## ⚙️ How to Run
+
+Follow these steps to run the system locally:
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/basharul2002/Rock-vs-Mine-Classification.git
+```
+
+### 2️⃣ Install Dependencies
+Ensure the necessary libraries are installed. Run:
 ```bash
 pip install numpy pandas scikit-learn
 ```
 
----
+### 3️⃣ Run the Python Script
+Make sure the sonar dataset is available and execute the script:
+```bash
+python rock_vs_mine_classification.py
+```
 
-## 📊 **Data Overview**
-
-The dataset used in this project contains sonar signal readings for different objects. Each reading is associated with a label:
-
-- **M**: Mine
-- **R**: Rock
-
-### ✨ Key Steps in Data Processing:
-- **Loading the dataset** into a Pandas DataFrame.
-- **Exploring the dataset**: Check dimensions, summary statistics, and any missing values.
-- **Data Cleaning**: Ensure there are no null values and the data is ready for training.
-- **Feature Extraction**: Separating features (sonar signals) from the target labels.
+### 4️⃣ Enter Sonar Data
+Input the sonar signal data when prompted, and the system will classify it as a **Rock** or a **Mine**.
 
 ---
 
-## 🧠 **Model Training**
+## 📊 Example Output
 
-We used the **Logistic Regression** algorithm to classify the sonar signals into two categories: **Mine** or **Rock**. The dataset is split into **training** and **test** sets, where the model learns patterns from the training data and is tested on unseen data for accuracy.
+```bash
+Model Accuracy: 85.3%
 
-### 🛠️ **Training Process**:
-
-- **90% of data** for training.
-- **10% of data** for testing.
-- Stratified sampling ensures equal distribution of classes in both sets.
-
----
-
-## 📈 **Evaluation & Performance**
-
-After training the model, we evaluate its performance on both the training and test datasets. This helps assess the model's ability to generalize on unseen data.
-
-- ✅ **Training Accuracy**: How well the model fits the training data.
-- ✅ **Testing Accuracy**: Model performance on the test dataset, which reflects generalization.
+Enter the sonar readings: [0.031, 0.025, 0.021, ...]
+Prediction: The object is a Mine.
+```
 
 ---
 
-## 🔍 **Prediction System**
+## 📂 Directory Structure
 
-Our system allows users to input new sonar signal data to predict whether the object is a **Rock** or a **Mine**. The prediction system takes a set of 60 sonar readings as input and returns:
+```
+Rock-vs-Mine-Classification/
+│
+├── data/
+│   └── sonar_dataset.csv     # Sonar readings dataset
+├── rock_vs_mine_classification.py  # Main Python script
+└── README.md                 # Documentation
+```
 
-- **M**: The object is a Mine.
-- **R**: The object is a Rock.
-
-You can feed custom sonar data to the model and it will output an immediate prediction.
-
+<!--
 ---
 
-## 🏆 **Conclusion**
+## 📜 License
 
-This project demonstrates how sonar signals can be effectively classified into **Rocks** or **Mines** using machine learning techniques. With a simple but powerful model like **Logistic Regression**, this system provides accurate predictions, making it a valuable tool for industries dealing with sonar data.
-
----
-
-## 📫 **Contact Information**
-
-Have any questions or suggestions? Feel free to reach out!  
-I'm happy to help.
-
-- **Email**: [basharulalam6@gmail.com](mailto:basharulalam6@gmail.com)
-- **GitHub**: [Basharul-Alam-Mazu](https://github.com/basharul2002)
-
----
-
-### 🎯 **Let's build a better future with Machine Learning!**  
-Thank you for exploring this project! 💻🚀
-
+This project is open-source and available under the [MIT License](LICENSE).
+-->
